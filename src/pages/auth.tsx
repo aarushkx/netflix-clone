@@ -23,7 +23,9 @@ const Auth = () => {
                 password,
                 callbackUrl: "/profiles",
             });
-        } catch (error) {}
+        } catch (error) {
+            console.log(error);
+        }
     }, [email, password]);
 
     const signup = useCallback(async () => {
@@ -35,7 +37,9 @@ const Auth = () => {
             });
 
             signin();
-        } catch (error) {}
+        } catch (error) {
+            console.log(error);
+        }
     }, [name, email, password, signin]);
 
     return (
